@@ -1,15 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container } from "./style";
 import Header from "../Header";
+import Blog from "../Blog/";
 
-class App extends Component {
-  render() {
-    return (
-      <Container>
-        <Header />
-      </Container>
-    );
-  }
-}
-
-export default App;
+export default () => {
+  return (
+    <Container>
+      <Header />
+      <Blog />
+    </Container>
+  );
+};

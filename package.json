@@ -2,7 +2,7 @@
   "name": "innocode",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://serafimpoch.github.io/test-inn/",
+  "homepage": "https://serafimpoch.github.io/test/",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",

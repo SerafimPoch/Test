@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import header_image from "../../img/header.png";
+import header_image from "../../images/header.png";
 
 export const HeaderImage = styled.div`
   background-image: url(${header_image});
@@ -8,8 +8,4 @@ export const HeaderImage = styled.div`
   max-width: 1200px;
   width: 100%;
   height: 380px;
-
-  @media (min-width: 320px) and (max-width: 768px) {
-    background-size: contain;
-  }
 `;
