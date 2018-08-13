@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import { Container } from "./style";
+import Header from "../Header";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <p>hello Serafim!</p>
-      </div>
+      <Container>
+        <Header />
+      </Container>
     );
   }
 }
