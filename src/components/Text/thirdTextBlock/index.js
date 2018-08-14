@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import GrayLine from "../title/textContent/line";
+import GrayLine from "../title/titleContent/line";
 import { ThirdTBContainer, LineContainer } from "./style";
 
 export default () => {

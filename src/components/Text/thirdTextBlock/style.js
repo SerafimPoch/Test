@@ -7,6 +7,7 @@ export const ThirdTBContainer = styled.div`
 
   p {
     font-size: 18px;
+    color: black;
     margin-top: 20px;
     text-align: justify;
   }

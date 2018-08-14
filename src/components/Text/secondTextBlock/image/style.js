@@ -12,7 +12,6 @@ export const RoadImage = styled.div`
 
   @media (min-width: 320px) and (max-width: 768px) {
     background-size: contain;
-
     right: 0px;
   }
 `;

@@ -1,4 +1,4 @@
-import { BlogText } from "../../title/textContent/firstTextBlock/style";
+import { BlogText } from "../../title/titleContent/text/style";
 
 export const STContainer = BlogText.extend`
   max-width: 480px;
