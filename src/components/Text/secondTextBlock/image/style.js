@@ -4,9 +4,9 @@ import road from "../../../../images/road.png";
 export const RoadImage = styled.div`
   background-image: url(${road});
   background-repeat: no-repeat;
-  max-width: 390px;
+  max-width: 350px;
   width: 100%;
-  height: 270px;
+  height: 218px;
   position: relative;
   right: 34px;
 

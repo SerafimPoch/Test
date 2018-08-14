@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SecondTBContainer = styled.div`
   display: flex;
+  align-items: flex-end;
   margin-top: 20px;
   width: 100%;
 
