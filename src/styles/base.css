@@ -1,3 +1,27 @@
 body {
   background-color: black;
 }
+
+.newComment {
+  width: 635px;
+  padding-bottom: 40px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  outline: none;
+  font-size: 16px;
+  resize: none;
+}
+
+::-webkit-input-placeholder {
+  color: #e3e3e3;
+}
+::-moz-placeholder {
+  color: #e3e3e3;
+}
+:-ms-input-placeholder {
+  color: #e3e3e3;
+}
+:-moz-placeholder {
+  color: #e3e3e3;
+}
