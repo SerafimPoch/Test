@@ -20,3 +20,14 @@ export const get = async () => {
   const data = await response.json();
   return data;
 };
+
+export const put = async (userData, id) => {
+  const headers = new Headers({ accept: "form-data" });
+  const response = await fetch(base_api_url + `/${id}`, {
+    method: "PUT",
+    body: userData,
+    headers
+  });
+  const data = await response.json();
+  return data;
+};

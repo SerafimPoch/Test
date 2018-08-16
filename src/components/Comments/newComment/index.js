@@ -3,6 +3,7 @@ import Title from "./title";
 import Content from "./form";
 import SendButton from "./sendButton";
 import { Form } from "./style";
+import GrayLine from "../../Text/title/titleContent/line";
 
 export default ({ handleSubmit, newComment }) => {
   return (
@@ -10,6 +11,7 @@ export default ({ handleSubmit, newComment }) => {
       <Title />
       <Content />
       <SendButton />
+      <GrayLine />
     </Form>
   );
 };

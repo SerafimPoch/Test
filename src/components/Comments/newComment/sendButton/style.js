@@ -4,6 +4,7 @@ export const SendButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  margin-bottom: 10px;
 `;
 
 export const SendButton = styled.button`

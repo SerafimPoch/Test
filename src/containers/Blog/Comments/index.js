@@ -3,28 +3,35 @@ import { reduxForm } from "redux-form";
 import { connect } from "react-redux";
 import { CommentsContainer } from "./style";
 import NewComment from "../../../components/Comments/newComment/";
-import { mapDispatchToProps } from "./commentsContainer";
-import { getCommentsApi } from "../../../services/api";
+import { mapStateToProps, mapDispatchToProps } from "./commentsContainer";
+import ListComments from "../../../components/Comments/listComments/";
 
 class Comments extends Component {
   componentDidMount() {
-    console.log(getCommentsApi());
+    return this.props.getComments();
+  }
+
+  componentDidUpdate() {
+    return this.props.getComments();
   }
 
   postNewComment = ({ textNC }) => {
-    const cradentials = new FormData();
-    cradentials.append("content", textNC);
-    return this.props.addComment(cradentials);
+    const comment = new FormData();
+    comment.append("content", textNC);
+    return this.props.addComment(comment);
   };
 
+  editComment = () => {};
+
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, comments } = this.props;
     return (
       <CommentsContainer>
         <NewComment
           handleSubmit={handleSubmit}
           newComment={this.postNewComment}
         />
+        <ListComments list={comments ? comments : null} />
       </CommentsContainer>
     );
   }
@@ -35,6 +42,6 @@ Comments = reduxForm({
 })(Comments);
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Comments);

@@ -13,6 +13,20 @@ body {
   resize: none;
 }
 
+.dark {
+  width: 620px;
+  padding-bottom: 40px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  outline: none;
+  font-size: 16px;
+  resize: none;
+}
+
+.editSend {
+  margin-top: 10px;
+}
+
 ::-webkit-input-placeholder {
   color: #e3e3e3;
 }

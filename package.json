@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "https://serafimpoch.github.io/test/",
   "dependencies": {
-    "antd": "^3.8.1",
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
+    "react-collapsible": "^2.2.0",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
