@@ -1,17 +1,27 @@
-import React from "react";
-import { ListCommentsContainer, UserCommentContainer } from "./style";
+import React, { Fragment } from "react";
+import {
+  ListCommentsContainer,
+  UserCommentContainer,
+  ChildContainer
+} from "./style";
 import Parent from "./parent";
+import Child from "./child";
 
 export default ({ list }) => {
   return (
-    <ListCommentsContainer>
-      {list.map(element => {
+    <Fragment>
+      {list.map((element, id) => {
         return (
-          <UserCommentContainer key={element.id}>
-            <Parent list={element} />
-          </UserCommentContainer>
+          <ListCommentsContainer key={element.id}>
+            <UserCommentContainer key={element.id}>
+              <Parent list={element} />
+            </UserCommentContainer>
+            <ChildContainer key={id}>
+              {element.children === [] ? null : <Child list={element} />}
+            </ChildContainer>
+          </ListCommentsContainer>
         );
       })}
-    </ListCommentsContainer>
+    </Fragment>
   );
 };
