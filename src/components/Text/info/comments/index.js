@@ -6,7 +6,7 @@ import { AuthorContainer } from "../author/style";
 export default () => {
   return (
     <AuthorContainer>
-      <img src={chat} alt="chat" />
+      <img src={chat} alt="chat" className="chat" />
       <GrayBoldText>12 comments</GrayBoldText>
     </AuthorContainer>
   );

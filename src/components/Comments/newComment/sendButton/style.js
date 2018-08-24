@@ -16,4 +16,10 @@ export const SendButton = styled.button`
   border: none;
   outline: none;
   font-size: 18px;
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    width: 100px;
+    height: 30px;
+    margin-right: 15px;
+  }
 `;

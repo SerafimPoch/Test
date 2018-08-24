@@ -6,4 +6,8 @@ export const Form = styled.form`
   justify-content: flex-start;
   width: 100%;
   margin-bottom: 40px;
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    max-width: 500px;
+  }
 `;

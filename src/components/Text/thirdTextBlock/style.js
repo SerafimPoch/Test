@@ -11,6 +11,10 @@ export const ThirdTBContainer = styled.div`
     margin-top: 20px;
     text-align: justify;
   }
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    margin-left: 0px;
+  }
 `;
 
 export const LineContainer = styled.div`

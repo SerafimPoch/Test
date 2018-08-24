@@ -5,14 +5,19 @@ import Comment from "./comment";
 import Buttons from "./buttons";
 import { ParentContainer, ParentCommentInfo } from "./style";
 
-export default ({ list }) => {
+export default ({ list, getComments, deleteComment, editComment }) => {
   return (
     <ParentContainer>
       <Avatar avatar={list} />
       <ParentCommentInfo>
         <NameDate name={list} />
         <Comment comment={list} />
-        <Buttons list={list} />
+        <Buttons
+          list={list}
+          getComments={getComments}
+          deleteComment={deleteComment}
+          editComment={editComment}
+        />
       </ParentCommentInfo>
     </ParentContainer>
   );

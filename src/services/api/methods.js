@@ -13,7 +13,7 @@ export const post = async source => {
 
 export const get = async () => {
   const headers = new Headers({ accept: "application/json" });
-  const response = await fetch(base_api_url, {
+  const response = await fetch(base_api_url + `?count=5`, {
     method: "GET",
     headers
   });
@@ -30,4 +30,11 @@ export const put = async (userData, id) => {
   });
   const data = await response.json();
   return data;
+};
+
+export const del = async id => {
+  const response = await fetch(base_api_url + `/${id}`, {
+    method: "DELETE"
+  });
+  return response;
 };

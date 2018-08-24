@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import {
   ListCommentsContainer,
   UserCommentContainer,
@@ -7,21 +7,26 @@ import {
 import Parent from "./parent";
 import Child from "./child";
 
-export default ({ list }) => {
+export default ({ list, getComments, deleteComment, editComment }) => {
   return (
-    <Fragment>
+    <ListCommentsContainer>
       {list.map((element, id) => {
         return (
-          <ListCommentsContainer key={element.id}>
+          <div key={id}>
             <UserCommentContainer key={element.id}>
-              <Parent list={element} />
+              <Parent
+                list={element}
+                getComments={getComments}
+                deleteComment={deleteComment}
+                editComment={editComment}
+              />
             </UserCommentContainer>
             <ChildContainer key={id}>
               {element.children === [] ? null : <Child list={element} />}
             </ChildContainer>
-          </ListCommentsContainer>
+          </div>
         );
       })}
-    </Fragment>
+    </ListCommentsContainer>
   );
 };

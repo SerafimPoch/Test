@@ -6,7 +6,7 @@ import user from "../../../../images/user.png";
 export default () => {
   return (
     <AuthorContainer>
-      <img src={user} alt="user" />
+      <img src={user} alt="user" className="user" />
       <GrayLightText>Post by </GrayLightText>
       <GrayBoldText>Will Smith</GrayBoldText>
     </AuthorContainer>

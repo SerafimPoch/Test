@@ -1,7 +1,6 @@
 import React from "react";
 import { Field } from "redux-form";
-import { EditFormContainer } from "./style";
-import SendButton from "../../../../../newComment/sendButton";
+import { EditFormContainer, SendButtonEdit } from "./style";
 
 export default () => {
   return (
@@ -14,9 +13,8 @@ export default () => {
         placeholder="Your Message"
         required
       />
-      <div className="editSend">
-        <SendButton>Send</SendButton>
-      </div>
+
+      <SendButtonEdit>Send</SendButtonEdit>
     </EditFormContainer>
   );
 };

@@ -21,17 +21,26 @@ class Comments extends Component {
     return this.props.addComment(comment);
   };
 
-  editComment = () => {};
-
   render() {
-    const { handleSubmit, comments } = this.props;
+    const {
+      handleSubmit,
+      comments,
+      getComments,
+      deleteComment,
+      editComment
+    } = this.props;
     return (
       <CommentsContainer>
         <NewComment
           handleSubmit={handleSubmit}
           newComment={this.postNewComment}
         />
-        <ListComments list={comments ? comments : null} />
+        <ListComments
+          list={comments ? comments : null}
+          getComments={getComments}
+          deleteComment={deleteComment}
+          editComment={editComment}
+        />
       </CommentsContainer>
     );
   }
