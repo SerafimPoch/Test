@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Collapsible from "react-collapsible";
-import { reduxForm } from "redux-form";
 import EditButton from "./button";
 import Content from "./form";
 
@@ -8,7 +7,6 @@ class Edit extends Component {
   edit = ({ edit }) => {
     const comment = new FormData();
     comment.append("content", edit);
-
     return this.props
       .editComment(comment, this.props.list.id)
       .then(this.props.getComments())
@@ -25,9 +23,5 @@ class Edit extends Component {
     );
   }
 }
-
-Edit = reduxForm({
-  form: "edit"
-})(Edit);
 
 export default Edit;

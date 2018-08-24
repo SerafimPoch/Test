@@ -13,7 +13,6 @@ export default () => {
         placeholder="Your Message"
         required
       />
-
       <SendButtonEdit>Send</SendButtonEdit>
     </EditFormContainer>
   );

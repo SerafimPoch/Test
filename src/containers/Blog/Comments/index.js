@@ -11,14 +11,13 @@ class Comments extends Component {
     return this.props.getComments();
   }
 
-  componentDidUpdate() {
-    return this.props.getComments();
-  }
-
   postNewComment = ({ textNC }) => {
     const comment = new FormData();
     comment.append("content", textNC);
-    return this.props.addComment(comment);
+    return this.props
+      .addComment(comment)
+      .then(this.props.getComments())
+      .then(this.props.reset());
   };
 
   render() {
@@ -27,7 +26,8 @@ class Comments extends Component {
       comments,
       getComments,
       deleteComment,
-      editComment
+      editComment,
+      reset
     } = this.props;
     return (
       <CommentsContainer>
@@ -37,6 +37,8 @@ class Comments extends Component {
         />
         <ListComments
           list={comments ? comments : null}
+          handleSubmit={handleSubmit}
+          reset={reset}
           getComments={getComments}
           deleteComment={deleteComment}
           editComment={editComment}

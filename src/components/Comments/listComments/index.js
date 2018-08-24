@@ -7,7 +7,14 @@ import {
 import Parent from "./parent";
 import Child from "./child";
 
-export default ({ list, getComments, deleteComment, editComment }) => {
+export default ({
+  list,
+  getComments,
+  deleteComment,
+  editComment,
+  handleSubmit,
+  reset
+}) => {
   return (
     <ListCommentsContainer>
       {list.map((element, id) => {
@@ -19,6 +26,8 @@ export default ({ list, getComments, deleteComment, editComment }) => {
                 getComments={getComments}
                 deleteComment={deleteComment}
                 editComment={editComment}
+                handleSubmit={handleSubmit}
+                reset={reset}
               />
             </UserCommentContainer>
             <ChildContainer key={id}>
