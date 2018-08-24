@@ -5,19 +5,20 @@ import EditButton from "./button";
 import Content from "./form";
 
 class Edit extends Component {
-  editComment = ({ edit }) => {
+  edit = ({ edit }) => {
     const comment = new FormData();
     comment.append("content", edit);
 
     return this.props
       .editComment(comment, this.props.list.id)
-      .then(this.props.getComments());
+      .then(this.props.getComments())
+      .then(this.props.reset());
   };
 
   render() {
     return (
       <Collapsible trigger={<EditButton />}>
-        <form onSubmit={this.props.handleSubmit(this.editComment)}>
+        <form onSubmit={this.props.handleSubmit(this.edit)}>
           <Content />
         </form>
       </Collapsible>
