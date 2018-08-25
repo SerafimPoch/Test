@@ -6,7 +6,7 @@ import LoadMore from "../../components/loadMore";
 import { connect } from "react-redux";
 import { mapDispatchToProps } from "./blogContainer";
 
-const Blog = ({ loadMore, getComments }) => {
+const Blog = ({ loadMore }) => {
   return (
     <BlogContainer>
       <Text />

@@ -38,3 +38,13 @@ export const del = async id => {
   });
   return response;
 };
+
+export const loadMore = async () => {
+  const headers = new Headers({ accept: "application/json" });
+  const response = await fetch(base_api_url + `?count=100`, {
+    method: "GET",
+    headers
+  });
+  const data = await response.json();
+  return data;
+};

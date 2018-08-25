@@ -1,4 +1,4 @@
-import { post, get, put, del } from "./methods";
+import { post, get, put, del, loadMore } from "./methods";
 
 export const addCommentApi = userData => {
   return post(userData);
@@ -14,4 +14,8 @@ export const editCommentApi = (userData, id) => {
 
 export const deleteCommentApi = id => {
   return del(id);
+};
+
+export const loadMoreApi = () => {
+  return loadMore();
 };
