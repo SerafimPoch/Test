@@ -10,4 +10,8 @@ export const AvatarImage = styled.img`
     max-width: 60px;
     max-height: 60px;
   }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin-right: 10px;
+  }
 `;

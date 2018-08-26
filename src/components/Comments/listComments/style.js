@@ -16,10 +16,6 @@ export const UserCommentContainer = styled.div`
 
 export const ChildContainer = styled.div`
   display: flex;
-  margin-left: 110px;
   width: 100%;
-
-  @media (min-width: 320px) and (max-width: 568px) {
-    margin-left: 0px;
-  }
+  justify-content: center;
 `;
