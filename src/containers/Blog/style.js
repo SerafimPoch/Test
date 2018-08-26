@@ -10,4 +10,8 @@ export const BlogContainer = styled.div`
   margin-bottom: 200px;
   max-width: 960px;
   height: 100%;
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    margin-bottom: 50px;
+  }
 `;

@@ -18,7 +18,13 @@ export const LoadMoreButton = styled.button`
   height: 35px;
   border-radius: 5px;
   border: 1px solid #c5c5c5;
+  color: #c5c5c5;
   outline: none;
   cursor: pointer;
   font-size: 14px;
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    width: 100%;
+    height: 100%;
+  }
 `;

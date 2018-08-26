@@ -6,7 +6,7 @@ export const ListCommentsContainer = styled.div`
   margin-bottom: 40px;
 
   @media (min-width: 320px) and (max-width: 568px) {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
   }
 `;
 

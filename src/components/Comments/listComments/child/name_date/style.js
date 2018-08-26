@@ -10,4 +10,8 @@ export const Name = styled.p`
   font-weight: bold;
   color: black;
   margin-right: 10px;
+
+  @media (min-width: 320px) and (max-width: 568px) {
+    font-size: 14px;
+  }
 `;
