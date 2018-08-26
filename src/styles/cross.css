@@ -1,0 +1,17 @@
+::-webkit-input-placeholder {
+  color: #e3e3e3;
+}
+::-moz-placeholder {
+  color: #e3e3e3;
+}
+
+:-ms-input-placeholder {
+  color: #e3e3e3;
+}
+:-moz-placeholder {
+  color: #e3e3e3;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
